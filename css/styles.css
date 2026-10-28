@@ -759,3 +759,35 @@ svg {
 }
 
 
+/* MOBILE CSS UPDATE TEST */
+@media (max-width: 768px) {
+.hero__inner {
+grid-template-columns: minmax(0, 1fr) !important;
+gap: 28px !important;
+}
+
+.hero__visual,
+.hero__content,
+.hero__card {
+width: 100% !important;
+min-width: 0 !important;
+max-width: 100% !important;
+}
+
+.hero__visual {
+order: 0 !important;
+}
+
+.hero__code {
+white-space: pre-wrap !important;
+overflow-wrap: anywhere !important;
+word-break: break-word !important;
+overflow-x: hidden !important;
+}
+
+.hero__title,
+.hero__intro {
+max-width: 100% !important;
+overflow-wrap: anywhere !important;
+}
+}
