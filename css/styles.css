@@ -562,4 +562,82 @@ main, .site-footer { position: relative; z-index: 1; }
   .hero__card { transform: none; }
 }
 
+/* Mobile responsive fixes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .nav-container,
+  .hero-container,
+  .hero-content,
+  .hero-text,
+  .hero-visual {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-content,
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero h1,
+  .hero-title {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+  }
+
+  .hero p,
+  .hero-subtitle {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-visual {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-visual pre,
+  .hero-visual code {
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    max-width: 100%;
+  }
+}
 
